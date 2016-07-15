@@ -9,9 +9,12 @@
 
 <body>
 <script>
+var idb_db="testdb";			//<= Databasename
+var idb_os="testtabelle";		//<= Tablename
+
 var dsatz = {name:"Test3",
 			type:"Testeintrag"}
-idb.dbdelete(4);
+idb.dbread([1,2,3],function(e){console.dir(e.target.result);});
 </script>
 </body>
 </html>
