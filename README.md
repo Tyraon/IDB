@@ -6,12 +6,12 @@ Hier wird nun in wenigen Schritten erklärt, wie IDB genutzt werden kann.
 
 == Erste Nutzung von IDB
 
-Als erste laden wir uns das IDB von Gitlab herunter: http://gitlab.me:10080/Tyraon/IDB
+Als erste laden wir uns das IDB von herunter.
 und kopieren uns nun die idb.js in das Verzeichnis in dem wir arbeiten.
 
 Zu beachten ist, dass für die Ausgabe jQuery genutzt wird. Daher müssen 2 Scripte in die HTML Date eingebunden werden.
 
-[source, html]
+
 ----
 <head>
 <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
@@ -21,7 +21,7 @@ Zu beachten ist, dass für die Ausgabe jQuery genutzt wird. Daher müssen 2 Script
 Da wir das IDB nun eingebunden haben können wir es auch nutzen.
 Als erstes müssen wir einen Datenbanknamen vergeben, wie in diesem Beispiel 'testdb' und einen Namen für die Tabelle 'testtabelle'.
 
-[source, javascript]
+
 ----
 <script>
 var idb_db='testdb';
@@ -37,7 +37,7 @@ Ab jetzt brauchen wir IDB nur noch sagen was wir mit der Datenbank machen wollen
 
 Als erstes schreiben wir einen Datensatz in die Tabelle unserer Datenbank:
 
-[source, javascript]
+
 ----
 var datensatz = {
                 name:"Test",
