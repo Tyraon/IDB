@@ -17,7 +17,6 @@ if(!thisDB.objectStoreNames.contains(idb_os)){
 
 //success
 
-
 //methods
 return{
 	dbwrite : function(rdb){
