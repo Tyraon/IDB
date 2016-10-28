@@ -12,21 +12,21 @@ und kopieren uns nun die idb.js in das Verzeichnis in dem wir arbeiten.
 Zu beachten ist, dass für die Ausgabe jQuery genutzt wird. Daher müssen 2 Scripte in die HTML Date eingebunden werden.
 
 
-----
+
 <head>
 <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
 <script src="idb.js"></script>
-----
+
 
 Da wir das IDB nun eingebunden haben können wir es auch nutzen.
 Als erstes müssen wir einen Datenbanknamen vergeben, wie in diesem Beispiel 'testdb' und einen Namen für die Tabelle 'testtabelle'.
 
 
-----
+
 <script>
 var idb_db='testdb';
 var idb_os='testtabelle';
-----
+
 
 Hier haben wir der Variable 'idb_db' den Namen zugewiesen um dem IDB zu sagen wie die Datenbank heißt. In der Variable 'idb_os' haben wir unseren Namen für die Tabelle eingegeben.
 
@@ -38,24 +38,23 @@ Ab jetzt brauchen wir IDB nur noch sagen was wir mit der Datenbank machen wollen
 Als erstes schreiben wir einen Datensatz in die Tabelle unserer Datenbank:
 
 
-----
+
 var datensatz = {
                 name:"Test",
                 inhalt:"Testeintrag!"
                 }
 
 idb.dbwrite(datensatz);
-----
+
 
 Zuerst haben wir einen Datensatz erstellt in dem wir die Daten abgelegt haben die wir nun speichern wollen.
 Darunter haben wir dann mit einem einfachen Befehl (idb.dbwrite()) den Datensatz an IDB übergeben und wurde dann in die Datenbank gespeichert.
 
 Nun wollen wir uns diese Daten ausgeben lassen:
 
-[source, javascript]
-----
+
 idb.dbread([1],function(e){console.dir(e.target.result);});
-----
+
 
 Diese Zeile ist recht klein, enthält jedoch alle notwendigen Informationen. Als erstes geben wir den Key des Datensatzes an (als Array[]) den wir ausgeben lassen wollen. Der zweite Parameter ist eine Callback-Funktion bei Erfolg. In unserem Fall lassen wir uns das Ergebnis in der Konsole ausgeben. Der dritte Parameter wäre eine Callback-Funktion für denn Fall, dass es keinen Erfolg gibt.
 
